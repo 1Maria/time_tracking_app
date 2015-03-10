@@ -1,2 +1,12 @@
-<h1>Projects#show</h1>
-<p>Find me in app/views/projects/show.html.erb</p>
+<p id="notice"><%= notice %></p>
+<h1>Show Project</h1>
+
+<p>
+  <strong>Project Name:</strong>
+  <%= @project.project_name %><br>
+</p>
+
+<p>
+  <strong>Allowed Hours:</strong>
+  <%= @project.allowed_hours %>
+</p>
