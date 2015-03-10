@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  duration: 9.99
+  project_id: 1
+  completed_on: 2015-03-09
+  developer_id: 1
+
+two:
+  duration: 9.99
+  project_id: 1
+  completed_on: 2015-03-09
+  developer_id: 1
