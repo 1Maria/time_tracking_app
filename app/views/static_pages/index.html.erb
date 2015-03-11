@@ -1,5 +1,5 @@
 <% if session[:developer] %>
-  <h2>Hello <%= (user = Developer.find(session[:developer])).name %></h2>
+  <h2>Hello <%= (developer = Developer.find(session[:developer])).developer_name %></h2>
   <h5><%= link_to "Signout", session_path(developer), method: :delete %>
 <% else %>
   <%= link_to "Register", new_developer_path %>

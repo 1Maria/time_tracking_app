@@ -13,7 +13,7 @@ class Developer < ActiveRecord::Base
   validates :password, length: { minimum: 6 }
 
   def self.authenticate_developer(email, password)
-    developer = find_by_email(email)
+    developer = find_by_email_address(email)
     if developer && developer.authenticate(password)
       developer
     else

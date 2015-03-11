@@ -2,7 +2,7 @@ class TimeEntriesController < ApplicationController
   before_action :set_time_entry, only: [:show, :edit, :update, :destroy]
 
   def index
-    @time_entries = TimeEntry.all
+    @time_entries = TimeEntry.where(developer_id: session[:id])
   end
 
   def show
