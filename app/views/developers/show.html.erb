@@ -1,2 +1,17 @@
-<h1>Developers#show</h1>
-<p>Find me in app/views/developers/show.html.erb</p>
+<p id="notice"><%= notice %></p>
+<h1>Show Developer</h1>
+
+<p>
+  <strong>Developer Name:</strong>
+  <%= @developer.developer_name %><br>
+</p>
+
+<p>
+  <strong>Email Address:</strong>
+  <%= @developer.email_address %><br>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @developer.password_digest %><br>
+</p>
