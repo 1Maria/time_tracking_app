@@ -1,2 +1,13 @@
-<h1>TimeEntries#show</h1>
-<p>Find me in app/views/time_entries/show.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<h1>Show Time Entry</h1>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @time_entry.duration %><br>
+</p>
+
+<p>
+  <strong>Completed On:</strong>
+  <%= @time_entry.completed_on %><br>
+</p>
