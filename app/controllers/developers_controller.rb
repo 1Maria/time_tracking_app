@@ -19,14 +19,10 @@ class DevelopersController < ApplicationController
   def create
     @developer = Developer.new(developer_params)
 
-    respond_to do |format|
-      if @developer.save
-        format.html { redirect_to @developer, notice: 'Developer was successfully created.' }
-        format.json { render :show, status: :created, location: @developer }
-      else
-        format.html { render :new }
-        format.json { render json: @developer.errors, status: :unprocessable_entity }
-      end
+    if @developer.save
+      redirect_to root_url, notice: "Developer Registered Successfully"
+    else
+      render 'new'
     end
   end
 
@@ -57,6 +53,6 @@ class DevelopersController < ApplicationController
   end
 
   def developer_params
-    params.require(:developer).permit(:developer_name, :email_address, :password_digest)
+    params.require(:developer).permit(:developer_name, :email_address, :password )
   end
 end
