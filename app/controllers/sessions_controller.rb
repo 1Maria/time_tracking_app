@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     developer = Developer.authenticate_developer(params[:email_address], params[:password])
 
     if developer
-      session[:developer] = developer.id
+      session[:developer_id] = developer.id
       redirect_to root_url
     else
       flash.now.alert = "Invalid Email or Password"
@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session[:developer] = nil
-    redirect_to root_url, notice: "Signed out successfully"
+    session[:developer_id] = nil
+    redirect_to login_path, notice: "Signed out successfully"
   end
 end
